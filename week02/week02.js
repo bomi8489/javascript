@@ -88,4 +88,3 @@
 // console.log(user.name);
 // console.log(user.body.height);
 // console.log(user.body.weight);
-
