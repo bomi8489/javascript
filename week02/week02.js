@@ -95,11 +95,11 @@
 // person.sayHi = () => {console.log("hello")}
 // person.sayHi();
 
-let dog = {
-    name : "lala",
-    age : 2,
-    sound() {
-        console.log("wang!");
-    }
-}
-dog.sound();
+// let dog = {
+//     name : "lala",
+//     age : 2,
+//     sound() {
+//         console.log("wang!");
+//     }
+// }
+// dog.sound();

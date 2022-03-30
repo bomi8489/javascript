@@ -1,3 +1,8 @@
+// querySelector : html 에서 class나 id를 찾아 매핑해주는 역할
+// createElement : createElement("div") 와 같은 방식으로 태그생성 가능
+// appendChild : 지정한 태그의 자식 태그로 넣어줌
+// removeChild : 지정한 태그의 자식 태그를 모두 삭제
+
 const containerBox = document.querySelector("#containerBox"),
     contents = containerBox.querySelector("#contents"),
     list = contents.querySelector("#list"),
