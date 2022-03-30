@@ -22,9 +22,11 @@ const sayHi = () => {
 }
 ```
 
+<a href="scope">scope란</a>
+
 <br><hr>
 
-## Scope란
+<h2 id="scope">Scope란</h2>
 - 스코프는 참조 대상 식별자를 찾아내기 위한 규칙이다. (쉽게 말해 변수가 어디를 참조해서 값을 가져오는지)
 
 ### 스코프의 종류
