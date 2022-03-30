@@ -22,11 +22,14 @@ const sayHi = () => {
 }
 ```
 
-<a href="scope">scope란</a>
+- <a href="#scope">scope란?</a><br>
+- <a href="#property">property란?</a><br>
+- <a href="#scope">객체란?</a>
 
 <br><hr>
 
 <h2 id="scope">Scope란</h2>
+
 - 스코프는 참조 대상 식별자를 찾아내기 위한 규칙이다. (쉽게 말해 변수가 어디를 참조해서 값을 가져오는지)
 
 ### 스코프의 종류
@@ -69,15 +72,20 @@ two();
 
 <br><hr>
 
-## 프로퍼티란?
+<h2 id="property">프로퍼티란?</h2>
+
 - 기본적으로 `property`란 어떤 값을 나타낸다. 이 때 이 값은 다른 값과 연관되어 있을때 `property`라고 지칭한다.
+
 - 예를들어 문자열에는 length 라는 프로퍼티가 포함되어 있는데, 이 프로퍼티는 문자열 안에 있는 문자의 길이를 정수로 나타낸 값을 담고 있다.
+
 ```
 const str = "hello";
 console.log(str.length);
 ```
 
-- `property`는 이름과 값을 가지고, 개체 참조를 가질 수 있으며, 함수를 담은 프로퍼티인 메소드도 있다.
+- `property`는 이름과 값을 가지고, 개체 참조를 가질 수 있으며, 함수도 담을 수 있다.
+
+<br><hr>
 
 ## 객체
 
@@ -102,6 +110,8 @@ user.name = "lee";
 user.weight = 50;
 ```
 - 상수(const)로 객체를 만들어도 객체 수정이 가능하다.(왜?)
+
+<br>
 
 ## 객체의 key를 확인하고 가져오는 함수 in, for...in
 
@@ -141,9 +151,7 @@ let user = {
 console.log(user.body.height);
 ```
 
-
 <br>
-<hr>
 
 ## 참조에 의한 객체 복사
 - 객체는 reference가 저장되고 복사된다.
@@ -208,7 +216,7 @@ console.log(user2.name);
 
 <br>
 
-## Shallow, Deep+Shallow, Deep 
+## Shallow, Deep+Shallow, Deep Copy
 
 ```
 let user = {
@@ -252,7 +260,32 @@ console.log(user.body.weight);
 
 > Deep Copy
 
-- 객체내의 객체까지 주소 복사가 아닌 프로퍼티의 구조까지 새로 생성하여 복사한다.
+- 객체내의 객체까지 주소 복사가 아닌 내부 객체의 구조까지 새로 생성하여 복사한다.
 
 <div style="text-align : center"><img src="./images/deepCopy.png"></div>
 
+<br><hr>
+
+## 메소드
+- 일반적으로 함수를 담고 있는 프로퍼티를 메소드라고 한다.
+- 객체에서 행동이나 기능을 메소드를 통해 구현할 수 있다.
+```
+let person = {
+    name : "kim",
+    age : 30
+};
+
+person.sayHi = () => {console.log("hello");}
+person.sayHi();
+```
+
+```
+let dog = {
+    name : "lala",
+    age : 2,
+    sound() {
+        console.log("wang!");
+    }
+}
+dog.sound();
+```

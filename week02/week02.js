@@ -84,7 +84,22 @@
 // user2.name = "kwon";
 // user2.body.height = 170;
 // user2.body.weight = 64;
-
 // console.log(user.name);
 // console.log(user.body.height);
 // console.log(user.body.weight);
+
+// let person = {
+//     name : "kim",
+//     age : 30
+// };
+// person.sayHi = () => {console.log("hello")}
+// person.sayHi();
+
+let dog = {
+    name : "lala",
+    age : 2,
+    sound() {
+        console.log("wang!");
+    }
+}
+dog.sound();
