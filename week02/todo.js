@@ -34,6 +34,7 @@ function createList(text) {
   }
 
   todos.push(todoList);
+  saveList();
 }
 
 function submitList(e) {  
@@ -48,9 +49,25 @@ function deleteList(event) {
   todos = todos.filter( (todos) => {
     return todos.id !== parseInt(event.target.parentNode.id);
   });
+  saveList();
+}
+
+function saveList() { // 리스트 저장함수
+  localStorage.setItem("todo", JSON.stringify(todos));
+}
+
+function loadList() { // 리스트 로드함수
+  const loadedList = localStorage.getItem("todo");   // 로컬 스토리지에서 키가 "todos"인 값들을 객체로 가져옴
+  if(loadedList !== null){
+      const parsedData = JSON.parse(loadedList);
+      parsedData.forEach(function(toDo){
+        createList(toDo.text);
+      });
+  }
 }
 
 function init() {
+  loadList();
   listForm.addEventListener("submit", submitList);
 }
 init();

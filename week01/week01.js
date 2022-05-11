@@ -84,8 +84,8 @@
 // one();
 // two();
 
-// console.log("시작");
-// setTimeout(function(){
-//     console.log("3초후 실행");
-// }, 3000);
-// console.log("끝");
+console.log("시작");
+setTimeout(function(){
+    console.log("3초후 실행");
+}, 3000);
+console.log("끝");
