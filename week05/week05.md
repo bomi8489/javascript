@@ -129,9 +129,12 @@
     })
     ```
 
-- callback 함수 인자로 resolve와 reject를 사용가능
+- 인자로 callback 함수 resolve와 reject를 사용가능
     > resolve 함수가 실행되면 Fulfilled 상태 <br>
     > reject 함수가 실행되면 Rejected 상태
+
+- resolve를 호출할 때 특정 값을 파라미터로 넣어주면, 이 값을 작업이 끝나고 나서 사용 할 수 있다
+- 작업이 끝나고 또 다른 작업을 해야 할 때는 `.then(...)`을 붙여서 사용하면 된다
 
     ```
     const testPromise = new Promise((resolve, reject) => {
@@ -145,8 +148,7 @@
     });
     ```
 
-- resolve를 호출할 때 특정 값을 파라미터로 넣어주면, 이 값을 작업이 끝나고 나서 사용 할 수 있다
-- 작업이 끝나고 또 다른 작업을 해야 할 때는 `.then(...)`을 붙여서 사용하면 된다
+- 실패의 상황에서는 reject를 호출하고 `.catch()`를 통해 실패했을 때의 수행 작업을 지정해 줄 수 있다
 
     ```
     const testPromise = new Promise((resolve, reject) => {
@@ -164,7 +166,7 @@
         });
     ```
 
-- 실패의 상황에서는 reject를 호출하고 `.catch()`를 통해 실패했을 때의 수행 작업을 지정해 줄 수 있다
+- Promise의 속성 중 then 내부에 넣은 함수에서 또 Promise를 리턴하게 되면 연달아서 사용할 수 있다
 
     ```
     function increaseNum(n) {
@@ -199,6 +201,7 @@
             console.log(e);
         })
     ```
+
     > 좀더 정리해보자
 
     ```
@@ -227,3 +230,4 @@
         })
     ```
 
+<br><hr>
