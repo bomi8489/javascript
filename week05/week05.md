@@ -1,16 +1,16 @@
 # 자바스크립트의 비동기 처리
 
-## 스코프와 객체, ajax
+## 키워드 복습
+### 스코프와 객체, ajax
 > 스코프의 종류<br>
 > 참조에 의한 객체 복사 (shallow, deep+shallow, deep copy)<br>
-> ajax를 통한 db통신과 비동기에 대해
+> ajax를 통한 db통신과 비동기 처리
 
 <br><hr>
 
 ## 자바스크립트의 동작 방식
 
 - 자바스크립트는 자체만으로 Single Thread 언어
-    > Thread : 프로세스안의 실행 흐름. 즉, 자바스크립트는 하나의 실행흐름
 
 - 싱글 스레드로 어떻게 한꺼번에 여러 요청을 처리할까?
     > 비동기 작업을 통해 여러 요청들을 처리
@@ -18,13 +18,6 @@
 - 자바스크립트 언어 자체는 싱글 스레드이지만, 런타임은 싱글 스레드가 아니다
 
 - 자바스크립트 비동기 런타임 과정
-
-    - call stack : 자바스크립트에서 수행해야 할 함수들을 순차적으로 스택에 담아 처리<br>
-
-    - web api : 웹 브라우저에서 제공하는 api로 ajax나 timeout등의 비동기 작업을 실행<br>
-
-    - task queue : callback queue라고도 하며 web api에서 넘겨받은 callback 함수를 전달<br>
-
 
     ```
     console.log("start");
@@ -35,6 +28,13 @@
 
     console.log("end");
     ```
+
+    - call stack : 자바스크립트에서 수행해야 할 함수들을 순차적으로 스택에 담아 처리<br>
+
+    - web api : 웹 브라우저에서 제공하는 api로 ajax나 timeout등의 비동기 작업을 실행<br>
+
+    - task queue : callback queue라고도 하며 web api에서 넘겨받은 callback 함수를 전달<br>
+
 
 <br><hr>
 
