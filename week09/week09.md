@@ -166,9 +166,9 @@ func();
 ```
 function func() {
     return dataFunc()
-        .then(data => return data)
-        .then(data2 => return data2)
-        .then(data3 => return data3)
+        .then(data => return dataFunc(data))
+        .then(data2 => return dataFunc(data2))
+        .then(data3 => return dataFunc(data3))
         .catch( (err) => {  // 어디서 일어난 에러일까?
             ...
         })

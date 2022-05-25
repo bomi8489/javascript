@@ -26,6 +26,7 @@
 // function func(){
 //     return new Promise((resolve, reject) => {
 //         setTimeout( () => {
+//             console.log("2");
 //             resolve("2");
 //         }, 1000);
 //     });
@@ -33,7 +34,7 @@
 
 // async function say123(){
 //     console.log("1");
-//     await func().then(console.log);
+//     await func();
 //     console.log("3");
 // }
 // say123()
